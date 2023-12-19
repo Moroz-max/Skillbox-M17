@@ -40,9 +40,11 @@ class ViewController: UIViewController {
             }
             
             let image = self.service.loadImage(urlString: urlString)
-            self.imageView.image = image
-            
-            self.activityIndicator.stopAnimating()
+            DispatchQueue.main.async {
+                self.imageView.image = image
+                
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
 }
