@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(frame: CGRect(x: 220, y: 220, width: 140, height: 140))
         return view
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        return stackView
     }()
     
     override func viewDidLoad() {
